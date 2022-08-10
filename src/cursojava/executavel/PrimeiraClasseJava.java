@@ -92,6 +92,8 @@ public class PrimeiraClasseJava {
 				trocar.getDisciplinas().add(disciplina);
 				
 				alunos.set(pos, trocar);
+				
+				aluno = alunos.get(pos);
 			}
 			
 			
