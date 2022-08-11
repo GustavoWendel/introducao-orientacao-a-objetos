@@ -134,7 +134,7 @@ public class Aluno {
 	}
 
 	/* Método que retorna a média do aluno */
-	public double getCalculaMediaAluno() {
+	public double getMediaNota() {
 		double somaNotas = 0.0;
 		for (Disciplina disciplina : disciplinas) {
 			somaNotas += disciplina.getNota();
@@ -144,7 +144,7 @@ public class Aluno {
 	}
 
 	public boolean getAlunoAprovado() {
-		double media = this.getCalculaMediaAluno();
+		double media = this.getMediaNota();
 		if (media >= 70) {
 			return true;
 		} else {
@@ -153,7 +153,7 @@ public class Aluno {
 	}
 
 	public String getAlunoAprovado2() {
-		double media = this.getCalculaMediaAluno();
+		double media = this.getMediaNota();
 		if (media >= 50) {
 			if (media >= 70) {
 				return StatusAluno.APROVADO;
