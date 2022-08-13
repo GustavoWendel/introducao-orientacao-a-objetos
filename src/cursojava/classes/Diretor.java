@@ -1,17 +1,18 @@
 package cursojava.classes;
 
+// Classe filha que extende de Pessoa
 public class Diretor extends Pessoa {
 
-    private String registroEducacao;
+    private String registroGeral;
     private int tempoDirecao;
     private String titulacao;
 
-    public String getRegistroEducacao() {
-        return registroEducacao;
+    public String getRegistroGeral() {
+        return registroGeral;
     }
 
-    public void setRegistroEducacao(String registroEducacao) {
-        this.registroEducacao = registroEducacao;
+    public void setRegistroEducacaoGeral(String RegistroGeral) {
+        this.registroGeral = RegistroGeral;
     }
 
     public int getTempoDirecao() {
@@ -28,5 +29,21 @@ public class Diretor extends Pessoa {
 
     public void setTitulacao(String titulacao) {
         this.titulacao = titulacao;
+    }
+
+    @Override
+    public String toString() {
+        return "Diretor {" +
+                "registroGeral='" + registroGeral + '\'' +
+                ", tempoDirecao=" + tempoDirecao +
+                ", titulacao='" + titulacao + '\'' +
+                ", nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", dataNascimento='" + dataNascimento + '\'' +
+                ", registroGeral='" + registroGeral + '\'' +
+                ", numeroCpf='" + numeroCpf + '\'' +
+                ", nomeMae='" + nomeMae + '\'' +
+                ", nomePai='" + nomePai + '\'' +
+                '}';
     }
 }

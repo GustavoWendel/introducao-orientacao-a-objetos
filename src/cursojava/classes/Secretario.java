@@ -1,5 +1,6 @@
 package cursojava.classes;
 
+// Classe Filha que extende de Pessoa
 public class Secretario extends Pessoa{
 
     private String registro;
@@ -28,5 +29,21 @@ public class Secretario extends Pessoa{
 
     public void setExperiencia(String experiencia) {
         this.experiencia = experiencia;
+    }
+
+    @Override
+    public String toString() {
+        return "Secretario {" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", dataNascimento='" + dataNascimento + '\'' +
+                ", registroGeral='" + registroGeral + '\'' +
+                ", numeroCpf='" + numeroCpf + '\'' +
+                ", nomeMae='" + nomeMae + '\'' +
+                ", nomePai='" + nomePai + '\'' +
+                ", registro='" + registro + '\'' +
+                ", nivelCargo='" + nivelCargo + '\'' +
+                ", experiencia='" + experiencia + '\'' +
+                '}';
     }
 }

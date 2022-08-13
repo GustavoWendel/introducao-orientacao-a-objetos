@@ -1,5 +1,6 @@
 package cursojava.classes;
 
+// Herança e Super Class
 public class Pessoa {
 
     protected String nome;
