@@ -12,21 +12,14 @@ import cursojava.constantes.StatusAluno;
  */
 
 /* Primeiro Objeto JAVA */
-public class Aluno {
+public class Aluno extends Pessoa{
 
-	private String nome;
-	private int idade;
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
-	private String nomeMae;
-	private String nomePai;
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
-	private List<Disciplina> disciplinas = new ArrayList<Disciplina>(); // Associação entre aluno e disciplina
+	private List<Disciplina> disciplinas = new ArrayList<>(); // Associaï¿½ï¿½o entre aluno e disciplina
 
-	public Aluno() { // Cria os dados na memória - Sendo padrão do Java
+	public Aluno() { // Cria os dados na memï¿½ria - Sendo padrï¿½o do Java
 
 	}
 
@@ -133,14 +126,14 @@ public class Aluno {
 		this.disciplinas = disciplinas;
 	}
 
-	/* Método que retorna a média do aluno */
+	/* Mï¿½todo que retorna a mï¿½dia do aluno */
 	public double getMediaNota() {
 		double somaNotas = 0.0;
 		for (Disciplina disciplina : disciplinas) {
 			somaNotas += disciplina.getNota();
 		}
 
-		return somaNotas / disciplinas.size(); // retorna o tamanho da lista e calcula a média;
+		return somaNotas / disciplinas.size(); // retorna o tamanho da lista e calcula a mï¿½dia;
 	}
 
 	public boolean getAlunoAprovado() {
@@ -168,9 +161,9 @@ public class Aluno {
 	@Override
 	public String toString() {
 		return "Aluno [Nome = " + nome + "\n" + ", Idade = " + idade + "\n" + ", Data de Nascimento = " + dataNascimento
-				+ "\n" + ", Registro Geral = " + registroGeral + "\n" + ", Número de Cpf = " + numeroCpf + "\n"
-				+ ", Nome da Mãe = " + nomeMae + "\n" + ", Nome do Pai = " + nomePai + "\n" + ", Data de Matricula = "
-				+ dataMatricula + "\n" + ", Nome da Escola = " + nomeEscola + "\n" + ", Série Matriculado = "
+				+ "\n" + ", Registro Geral = " + registroGeral + "\n" + ", Nï¿½mero de Cpf = " + numeroCpf + "\n"
+				+ ", Nome da Mï¿½e = " + nomeMae + "\n" + ", Nome do Pai = " + nomePai + "\n" + ", Data de Matricula = "
+				+ dataMatricula + "\n" + ", Nome da Escola = " + nomeEscola + "\n" + ", Sï¿½rie Matriculado = "
 				+ serieMatriculado + "]";
 	}
 
