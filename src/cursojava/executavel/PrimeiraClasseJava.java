@@ -15,17 +15,17 @@ import cursojava.constantes.StatusAluno;
  *
  */
 public class PrimeiraClasseJava {
-	// Main é um método autoexecutável em Java
+	// Main ï¿½ um mï¿½todo autoexecutï¿½vel em Java
 	public static void main(String[] Args) {
 		
 		String login = JOptionPane.showInputDialog("Informe o login: ");
 		String senha = JOptionPane.showInputDialog("Informe a senha: ");
 		
-		if(login.equalsIgnoreCase("Admin") && senha.equalsIgnoreCase("Admin")) {
+		if (login.equalsIgnoreCase("Admin") && senha.equalsIgnoreCase("Admin")) {
 		
 			List<Aluno> alunos = new ArrayList<Aluno>();
 			
-			/* é uma lista que dentro dela temos uma chave que identifica uma sequência de valores também*/
+			/* ï¿½ uma lista que dentro dela temos uma chave que identifica uma sequï¿½ncia de valores tambï¿½m*/
 			HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 			
 			List<Aluno> alunosAprovados = new ArrayList<Aluno>();
@@ -33,20 +33,20 @@ public class PrimeiraClasseJava {
 			List<Aluno> alunosReprovados = new ArrayList<Aluno>();
 			
 			for (int qtd = 1; qtd <= 5; qtd++) {
-				/* new Aluno é uma instância (Criação de Objeto) */
+				/* new Aluno ï¿½ uma instï¿½ncia (Criaï¿½ï¿½o de Objeto) */
 	
-				String nome = JOptionPane.showInputDialog("Qual é o nome do aluno "+ qtd + "?");
+				String nome = JOptionPane.showInputDialog("Qual ï¿½ o nome do aluno "+ qtd + "?");
 				/*int idade = Integer.parseInt(JOptionPane.showInputDialog("Idade: "));
 				String dataNascimento = JOptionPane.showInputDialog("Data de nascimento: ");
 				String registroGeral = JOptionPane.showInputDialog("Registro Geral: ");
-				String numeroCpf = JOptionPane.showInputDialog("Número de CPF: ");
-				String nomeMae = JOptionPane.showInputDialog("Nome da mãe: ");
+				String numeroCpf = JOptionPane.showInputDialog("Nï¿½mero de CPF: ");
+				String nomeMae = JOptionPane.showInputDialog("Nome da mï¿½e: ");
 				String nomePai = JOptionPane.showInputDialog("Nome do pai: ");
-				String dataMatricula = JOptionPane.showInputDialog("Data de matrícula: ");
+				String dataMatricula = JOptionPane.showInputDialog("Data de matrï¿½cula: ");
 				String nomeEscola = JOptionPane.showInputDialog("Nome da escola: ");
-				String serieMatriculado = JOptionPane.showInputDialog("Série do matriculado: ");*/
+				String serieMatriculado = JOptionPane.showInputDialog("Sï¿½rie do matriculado: ");*/
 	
-				Aluno aluno1 = new Aluno(); // Aqui será o João */
+				Aluno aluno1 = new Aluno(); // Aqui serï¿½ o Joï¿½o */
 	
 				aluno1.setNome(nome);
 				/*aluno1.setIdade(Integer.valueOf(idade));
@@ -79,7 +79,7 @@ public class PrimeiraClasseJava {
 					int continuarRemover = 0;
 					int posicao = 1;
 					while (continuarRemover == 0) {
-						String removerDisciplina = JOptionPane.showInputDialog("Qual é a disciplina 1, 2, 3 ou 4 ?");
+						String removerDisciplina = JOptionPane.showInputDialog("Qual ï¿½ a disciplina 1, 2, 3 ou 4 ?");
 						aluno1.getDisciplinas().remove(Integer.valueOf(removerDisciplina).intValue() - posicao);
 						posicao++; // ++ soma +1
 						continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover");
@@ -111,21 +111,21 @@ public class PrimeiraClasseJava {
 			for (Aluno aluno : maps.get(StatusAluno.APROVADO)) {
 				System.out.println("Nome do aluno = " + aluno.getNome() );
 				System.out.println("Resultado = "+ aluno.getAlunoAprovado2());
-				System.out.println("Média = "+ aluno.getMediaNota());
+				System.out.println("Mï¿½dia = "+ aluno.getMediaNota());
 			}
 			
-			System.out.println("---------------Lista dos alunos em recuperação---------------");
+			System.out.println("---------------Lista dos alunos em recuperaï¿½ï¿½o---------------");
 			for (Aluno aluno : maps.get(StatusAluno.RECUPERACAO)) {
 				System.out.println("Nome do aluno = " + aluno.getNome() );
 				System.out.println("Resultado = "+ aluno.getAlunoAprovado2());
-				System.out.println("Média = "+ aluno.getMediaNota());
+				System.out.println("Mï¿½dia = "+ aluno.getMediaNota());
 			}
 			
 			System.out.println("---------------Lista dos alunos reprovados---------------");
 			for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
 				System.out.println("Nome do aluno = " + aluno.getNome() );
 				System.out.println("Resultado = "+ aluno.getAlunoAprovado2());
-				System.out.println("Média = "+ aluno.getMediaNota());
+				System.out.println("Mï¿½dia = "+ aluno.getMediaNota());
 			}
 			
 		} else {

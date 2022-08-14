@@ -2,7 +2,8 @@ package cursojava.constantes;
 
 /* Classes*/
 public class StatusAluno {
-	public static String APROVADO = "Aprovado";
-	public static String RECUPERACAO = "Recuperação";
-	public static String REPROVADO = "Reprovado";
+	public static final String APROVADO = "Aprovado";
+	public static final String RECUPERACAO = "RecuperaÃ§Ã£o";
+	public static final String REPROVADO = "Reprovado";
+
 }
