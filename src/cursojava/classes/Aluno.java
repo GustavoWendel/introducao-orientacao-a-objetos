@@ -190,4 +190,12 @@ public class Aluno extends Pessoa{
 				&& Objects.equals(serieMatriculado, other.serieMatriculado);
 	}
 
+	@Override
+	public boolean pessoaMaiorIdade() {
+		return this.idade >= 21;
+	}
+
+	public String msgMaiorIdade() {
+		return this.pessoaMaiorIdade() ? "Obaaa, aluno é maior de idade" : "Ixii, você é de menor pivete";
+	}
 }
