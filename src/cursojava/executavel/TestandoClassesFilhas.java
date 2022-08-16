@@ -2,6 +2,7 @@ package cursojava.executavel;
 
 import cursojava.classes.Aluno;
 import cursojava.classes.Diretor;
+import cursojava.classes.Pessoa;
 import cursojava.classes.Secretario;
 
 public class TestandoClassesFilhas {
@@ -18,6 +19,7 @@ public class TestandoClassesFilhas {
         diretor.setIdade(50);
 
         Secretario secretario = new Secretario();
+        secretario.setNome("Jovelino");
         secretario.setExperiencia("Administração");
         secretario.setNumeroCpf("0123456789");
         secretario.setIdade(18);
@@ -30,5 +32,18 @@ public class TestandoClassesFilhas {
         System.out.println(diretor.pessoaMaiorIdade());
         System.out.println(secretario.pessoaMaiorIdade());
 
+        System.out.println("Salário do Aluno: R$ " + aluno.salario());
+        System.out.println("Salário do Diretor: R$ " + diretor.salario());
+        System.out.println("Salário do Secretário: R$ " + secretario.salario());
+
+        teste(aluno);
+        teste(diretor);
+        teste(secretario);
+
+    }
+
+    public static void teste(Pessoa pessoa) {
+        System.out.println("Essa pessoa é = " + pessoa.getNome() +
+                " e o salário é = R$ " + pessoa.salario());
     }
 }

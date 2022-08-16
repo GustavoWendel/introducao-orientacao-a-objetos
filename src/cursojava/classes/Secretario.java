@@ -46,4 +46,9 @@ public class Secretario extends Pessoa{
                 ", experiencia='" + experiencia + '\'' +
                 '}';
     }
+
+    @Override
+    public double salario() {
+        return 1800.80 * 0.9;
+    }
 }
